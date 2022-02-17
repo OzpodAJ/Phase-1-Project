@@ -1,4 +1,55 @@
+body {
+    background-image: url(Oceania.jpeg);
+    background-color: black;
+}
 h1 {
     color: #93E9BE;
     background-color: #13265C;
+    text-align: center;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height: 50px;
+}
+#messages {
+    margin-top: -21px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 200px;
+    height: 500px;
+    background: black;
+    overflow: scroll;
+}
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    padding: 10px;
+}
+#Username {
+    position: absolute;
+    left: 275px;
+    top: 950px;
+    
+}
+#enter {
+    position: absolute;
+    right: 450px;
+    top: 950px;
+}
+.drpdwn {
+    background-color: steelblue;
+    color: limegreen;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.drpdwn:hover, .drpdwn:focus {
+    background-color: #13265C;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
