@@ -7,7 +7,6 @@
 //     document.getElementById("unordered").appendChild(li);
  
 // });
-window.addEventListener('load', (event) => {
     let post = document.getElementById('enter');
     post.addEventListener('click', function(){
         let comment = document.getElementById('textarea').value;
@@ -15,6 +14,12 @@ window.addEventListener('load', (event) => {
         p.classList.add('message')
         let text = document.createTextNode(comment)
         p.appendChild(text);
-        document.getElementById('messages').appendChild(p)
+        document.getElementById('messages').appendChild(p);
     })
-})
+    // let username = document.getElementById('Username').value;
+    // let colorValue = document.getElementById("color=picker").value;
+    // let name = doucment.createElement('p');
+    // name.classList.add(colorValue)
+    // let input = document.createTextNode(username);
+    // name.appendChild(input);
+    // doucment.getElementById('messages').appendChild(name);
