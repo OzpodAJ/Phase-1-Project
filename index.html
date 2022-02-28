@@ -8,18 +8,17 @@
         <script src="index.js"></script>
         <h1>Welcome to the Ozpod</h1>
         <div id="messages">
-            <p class="message">This is an example image</p>
+            <p class="messageRight">This is an example message</p>
+            <p class="messageLeft">Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It’s not a story the Jedi would tell you. It’s a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life… He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.</p>
         </div>
-        <textarea name = 'message' placeholder="Put your desired messsage here"></textarea>
-        <input type = 'submit' name = 'submit' id="enter">
+        <textarea name = 'message' placeholder="Put your desired messsage here" id="textarea"></textarea>
+        <button type="submit" id="enter">Submit</button>
         <input type="text=" name='text' placeholder="Username" id="Username">
-        <div class="dropdown">
-            <button onclick="function()" class="drpdwn">Dropdown</button>
-            <div id="cDropdown" class="color-dropdown">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
+        <select id="color-picker">
+            <option value="red" id="red">Red</option>
+            <option value="blue" id="blue">Blue</option>
+            <option value="green" id="green">Green</option>
+            <option value="purple" id="purple">Purple</option>
+        </select>
     </body>
 </html>

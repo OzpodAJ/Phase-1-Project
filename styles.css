@@ -20,6 +20,20 @@ h1 {
     background: black;
     overflow: scroll;
 }
+.messageRight {
+    overflow-wrap: break-word;
+    border-radius: 25px;
+    padding: 20px;
+    color: black;
+    background-color: #93E9BE;
+}
+.messageLeft {
+    overflow-wrap: break-word;
+    border-radius: 25px;
+    padding: 20px;
+    color: black;
+    background-color: #C0C0C0;
+}
 textarea {
     display: block;
     margin-left: auto;
@@ -38,18 +52,8 @@ textarea {
     right: 450px;
     top: 950px;
 }
-.drpdwn {
-    background-color: steelblue;
-    color: limegreen;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-.drpdwn:hover, .drpdwn:focus {
-    background-color: #13265C;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
+select {
+    position: absolute;
+    left: 275px;
+    top: 975px;
 }
