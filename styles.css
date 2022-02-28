@@ -37,7 +37,7 @@ textarea {
     width: 25%;
     padding: 10px;
 }
-#Username {
+#username {
     position: absolute;
     left: 275px;
     top: 950px;
@@ -54,10 +54,9 @@ select {
     top: 975px;
 }
 p {
-    background-color: white;
-    color: black;
+    color: white;
 }
-.Red { color: red;}
-.Blue {color: navy;}
-.Green {color: darkgreen;}
-.Purple {color: #9400d3;}
+.red { color: red;}
+.blue {color: navy;}
+.green {color: darkgreen;}
+.purple {color: #9400d3;}
