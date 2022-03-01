@@ -4,23 +4,71 @@ let post = document.getElementById('enter');
         let color = document.getElementById('color-picker').value;
         let comment = document.getElementById('textarea').value;
         let u = document.createElement('p')
-        let p = document.createElement('p');
+        let p = document.createElement('div');
         u.classList.add(color);
-        p.classList.add('message');
-        let user = document.createTextNode(userField);
+        p.classList.add('p');
+        p.setAttribute('id', 'message')
+        let user = document.createTextNode(`${userField} says`);
         let text = document.createTextNode(comment);
         u.appendChild(user)
         p.appendChild(text);
         document.getElementById('messages').appendChild(u);
         document.getElementById('messages').appendChild(p);
     })
-//To Do
-    //Assign color value to Username based on selector value
-//add reply box
-    //make hidden div
-    //add click event listener to clicking a comment
-        //check if a hidden div is already nested inside of that specific P
-        //if yes, simply reveal Div, if no, create new
-        //add button to re-hide div
-        //apply same username to div comments
-//make it all permanent affecting actual code/server instead of immediate DOM
+let mBox = document.querySelector('#message')
+    mBox.addEventListener('click', () => {
+        let replyText = document.createElement('input')
+        replyText.setAttribute('id', 'replyText')
+        replyText.setAttribute('type', 'text')
+        replyText.setAttribute('placeholder', 'Type your reply here')
+        let reply = document.createElement('button')
+        reply.setAttribute('type', 'submit')
+        reply.setAttribute('id', 'replyButton')
+        reply.textContent = 'reply'
+        // reply.onclick = () => {
+        //     let userField = document.getElementById('username').value;
+        //     let color = document.getElementById('color-picker').value;
+        //     let comment = document.getElementById('replyText').value;
+        //     let u = document.createElement('p')
+        //     let p = document.createElement('p');
+        //     u.classList.add(color, 'repUser');
+        //     p.classList.add('repCom')
+        //     let user = document.createTextNode(`${userField} says`);
+        //     let text = document.createTextNode(comment);
+        //     u.appendChild(user)
+        //     p.appendChild(text);
+        //     document.getElementById('replyDiv').appendChild(u);
+        //     document.getElementById('replyDiv').appendChild(p);
+        // };
+        let hide = document.createElement('button');
+        hide.setAttribute('id', 'hide');
+        hide.setAttribute('type', 'submit');
+        hide.textContent = 'Hide Comments';
+        hide.onclick = () => {replyBox.style.display = "none";};
+        let replyBox = document.createElement('div');
+        replyBox.setAttribute('id', 'replyDiv');
+        replyBox.appendChild(replyText);
+        replyBox.appendChild(reply);
+        replyBox.appendChild(hide);
+        if (document.getElementById('replyDiv') == null) {
+            mBox.appendChild(replyBox);
+            replyBox.style.display = "block"
+        } else if (document.getElementById('replyDiv') != null){
+            replyBox.style.display = "block"
+        }
+    })
+    reply.addEventListener('click', () => {
+        let userField = document.getElementById('username').value;
+        let color = document.getElementById('color-picker').value;
+        let comment = document.getElementById('replyText').value;
+        let u = document.createElement('p')
+        let p = document.createElement('p');
+        u.classList.add(color, 'repUser');
+        p.classList.add('repCom')
+        let user = document.createTextNode(`${userField} says`);
+        let text = document.createTextNode(comment);
+        u.appendChild(user)
+        p.appendChild(text);
+        document.getElementById('replyDiv').appendChild(u);
+        document.getElementById('replyDiv').appendChild(p);
+    });
