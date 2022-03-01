@@ -12,12 +12,13 @@ h1 {
     height: 50px;
 }
 #messages {
-    margin-top: -21px;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 200px;
-    height: 500px;
-    background: black;
+    border-radius: 15px;
+    align-self: cente;
+    margin: auto;
+    padding: 50px;
+    width: 50%;
+    height: 400px;
+    background: #35393b;
     overflow: scroll;
 }
 #replyDiv {
@@ -29,6 +30,8 @@ h1 {
     overflow: scroll;
 }
 #message {
+    align-content: center;
+    width: fit-content;
     overflow-wrap: break-word;
     border-radius: 25px;
     padding: 20px;
@@ -57,22 +60,44 @@ textarea {
     padding: 10px;
 }
 #username {
+    border-radius: 25px;
+    background-color: #87ceeb;
+    color: black;
     position: absolute;
-    left: 275px;
+    left: 50px;
     top: 50px;
     
 }
 #enter {
-    position: absolute;
-    right: 450px;
-    top: 950px;
+    position: relative;
+    right: -675px;
+    top: 10px;
 }
 select {
+    border-radius: 25px;
+    background-color: lightcoral;
+    color: red;
     position: absolute;
-    left: 275px;
-    top: 975px;
+    left: 50px;
+    top: 73px;
 }
-.red { color: red;}
-.blue {color: navy;}
-.green {color: darkgreen;}
-.purple {color: #9400d3;}
+p {
+    border-radius: 25px;
+    padding: 5px;
+    width: fit-content;
+}
+.userStyle {
+    color: red
+}
+.red {
+    background-color: lightcoral; 
+    color: red;}
+.blue {
+    background-color: #87ceeb;
+    color: navy;}
+.green {
+    background-color: #93E9BE;
+    color: darkgreen;}
+.purple {
+    background-color: #CBC3E3;
+    color: #9400d3;}
