@@ -6,17 +6,18 @@ function post(e){
         message: e.target.textarea.value,
         color: e.target.colorpicker.value,
     }
+    pushMessage(postObj)
     postMessage(postObj)
 }
 function postMessage(content){
     let newMessage = document.createElement('div')
-    newMessage.className = 'message'
+    newMessage.className = 'post'
     newMessage.innerHTML = `
-    <p class="${content.color}">${content.username}</p>
+    <p class="basic">${content.username}</p>
     <p class="message">${content.message}</p>
     `
-
-    console.log(newMessage)
+    document.getElementById('messages').appendChild(newMessage)
+    // patchMessage(content)
 }
 function setColor(){
     let color = document.getElementById('colorpicker').value;
@@ -24,6 +25,35 @@ function setColor(){
 }
 let picker = document.getElementById('colorpicker');
 picker.addEventListener("input",setColor);
+
+function fetchMessage(){
+    fetch('http://localhost:3000/posts')
+    .then(res => res.json())
+    .then(messageData => messageData.forEach(newMessage => postMessage(newMessage)))
+}
+
+function pushMessage(postObj){
+    fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(postObj),
+    })
+    .then(res => res.json())
+    .then(newMessage => console.log(newMessage))
+}
+// function patchMessage(postObj){
+//     fetch(`http://localhost:3000/posts/${postObj.id}`, {
+//         method: 'PATCH',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body:JSON.stringify(postObj),
+//     })
+//     .then(res => res.json())
+//     .then(newMessage => console.log(newMessage))
+// }
 // let post = document.getElementById('enter');
 //     post.addEventListener('click', function(){
 //         let userField = document.getElementById('username').value;
