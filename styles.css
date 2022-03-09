@@ -21,7 +21,7 @@ h1 {
     background: black;
     overflow: scroll;
 }
-#replyDiv {
+.replyDiv {
     display: none;
     background-color: white;
     background-image: url(Cool-Whale.jpeg);
@@ -79,14 +79,10 @@ p {
     color: white;
 }
 .red {
-    background-color: lightcoral; 
     color: red;}
 .blue {
-    background-color: #87ceeb;
     color: navy;}
 .green {
-    background-color: #93E9BE;
     color: darkgreen;}
 .purple {
-    background-color: #CBC3E3;
     color: #9400d3;}

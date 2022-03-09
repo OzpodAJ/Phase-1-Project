@@ -1,21 +1,10 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
       "username": "Zorcoz",
-      "message": "hhh",
-      "color": "red",
-      "id": 2
-    },
-    {
-      "username": "Zorcoz",
-      "message": "ofe0wj[",
-      "color": "red",
-      "id": 3
+      "message": "The first In a Long Line of Messages",
+      "color": "purple",
+      "id": 1
     }
   ],
   "comments": [
