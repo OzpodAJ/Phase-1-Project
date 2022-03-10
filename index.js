@@ -28,14 +28,14 @@ const colorPicker = document.getElementById('colorpicker');
 function setColor(){
     let color = document.getElementById('colorpicker').value;
     colorPicker.setAttribute('class', color)
-    if (picker.value === "red"){
-        picker.style.backgroundColor = "#f08080"
-    }else if (picker.value === "purple"){
-        picker.style.backgroundColor = "#CBC3E3"
-    }else if (picker.value === "green"){
-        picker.style.backgroundColor = "#93E9BE"
-    }else if (picker.value === "blue"){
-        picker.style.backgroundColor = "#89CFF0"
+    if (colorPicker.value === "red"){
+        colorPicker.style.backgroundColor = "#f08080"
+    }else if (colorPicker.value === "purple"){
+        colorPicker.style.backgroundColor = "#CBC3E3"
+    }else if (colorPicker.value === "green"){
+        colorPicker.style.backgroundColor = "#93E9BE"
+    }else if (colorPicker.value === "blue"){
+        colorPicker.style.backgroundColor = "#89CFF0"
     }
 }
 colorPicker.addEventListener("input",setColor);
