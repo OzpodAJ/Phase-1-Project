@@ -17,6 +17,11 @@
       "body": "Test?",
       "postId": "1",
       "id": 2
+    },
+    {
+      "body": "",
+      "postId": "1",
+      "id": 3
     }
   ],
   "profile": {

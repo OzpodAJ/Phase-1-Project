@@ -17,27 +17,27 @@ function comment(e){
         postId: e.target.parentElement.parentElement.id
     }
     pushComment(repOb)
-    postComment(repOb)
+    postComment(postObj, repOb)
 }
 //target.parentElement.parentElement.id
 function postMessage(content){
     let newMessage = document.createElement('div')
-        newMessage.className = 'post';
-        newMessage.id = content.id;
+            newMessage.className = 'post';
+            newMessage.id = content.id;
     const username = document.createElement('p')
-        username.className = content.color;
-        username.innerText = content.username;
+            username.className = content.color;
+            username.innerText = content.username;
         newMessage.appendChild(username)
     const message = document.createElement('p')
-        message.className = "message";
-        message.innerText = content.message;
-        message.addEventListener('dblclick', ()=>{
-            if (replyDiv.style.display === 'none'){
-                replyDiv.style.display = 'block'
-            } else {
-                replyDiv.style.display = 'none'
-            }
-        })
+            message.className = "message";
+            message.innerText = content.message;
+            message.addEventListener('dblclick', ()=>{
+                if (replyDiv.style.display === 'none'){
+                    replyDiv.style.display = 'block'
+                } else {
+                    replyDiv.style.display = 'none'
+                }
+            })
         newMessage.appendChild(message)
     const replyDiv = document.createElement('div');
         replyDiv.className = "replyDiv"
@@ -60,6 +60,20 @@ function postMessage(content){
         newMessage.appendChild(replyDiv);
         rForm.addEventListener('submit', comment)
     document.getElementById('messages').appendChild(newMessage)
+}
+function postComment(content, comOb){
+    let newComment = document.createElement('div');
+            newComment.className = 'comment'
+            newComment.id = message.id
+    const username = document.createElement('p')
+        username.className = content.color;
+        username.innerText = content.username;
+    newComment.appendChild(username)
+    const commentText = document.createElement('p')
+        commentText.className = 'comment'
+        commentText.innerText = comOb.body
+    newComment.appendChild(commentText)
+    console.log(document.querySelector('.post'))
 }
 
 function setColor(){
