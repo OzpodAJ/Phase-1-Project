@@ -2,7 +2,7 @@
   "posts": [
     {
       "username": "Zorcoz",
-      "message": "The first In a Long Line of Messages",
+      "message": "Test Message",
       "color": "purple",
       "id": 1
     }
@@ -12,6 +12,11 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "body": "Test?",
+      "postId": "1",
+      "id": 2
     }
   ],
   "profile": {

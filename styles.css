@@ -23,6 +23,7 @@ h1 {
 }
 .replyDiv {
     display: none;
+    width: fit-content;
     background-color: white;
     background-image: url(Cool-Whale.jpeg);
     border-radius: 25px;
@@ -81,7 +82,7 @@ p {
 .red {
     color: red;}
 .blue {
-    color: navy;}
+    color: #0000FF;}
 .green {
     color: darkgreen;}
 .purple {
