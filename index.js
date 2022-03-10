@@ -7,7 +7,7 @@ function post(e){
         message: e.target.textarea.value,
         color: e.target.colorpicker.value,
     }
-    pushMessage(postObj)
+    pushMessages(postObj)
     postMessage(postObj)
 }
 function postMessage(content){
@@ -21,13 +21,13 @@ function postMessage(content){
     const message = document.createElement('p')
             message.className = "message";
             message.innerText = content.message;
-        newMessage.appendChild(message)
-    document.getElementById('messages').appendChild(newMessage)
+        newPost.appendChild(message)
+    document.getElementById('messages').appendChild(newPost)
 }
-const picker = document.getElementById('colorpicker');
+const colorPicker = document.getElementById('colorpicker');
 function setColor(){
     let color = document.getElementById('colorpicker').value;
-    picker.setAttribute('class', color)
+    colorPicker.setAttribute('class', color)
     if (picker.value === "red"){
         picker.style.backgroundColor = "#f08080"
     }else if (picker.value === "purple"){
@@ -38,16 +38,15 @@ function setColor(){
         picker.style.backgroundColor = "#89CFF0"
     }
 }
-const picker = document.getElementById('colorpicker');
-picker.addEventListener("input",setColor);
+colorPicker.addEventListener("input",setColor);
 
-function fetchMessage(){
+function fetchMessages(){
     fetch('http://localhost:3000/posts')
     .then(res => res.json())
     .then(messageData => messageData.forEach(newPost => postMessage(newPost)))
 }
-fetchMessage()
-function pushMessage(postObj){
+fetchMessages()
+function pushMessages(postObj){
     fetch('http://localhost:3000/posts', {
         method: 'POST',
         headers: {
@@ -56,5 +55,5 @@ function pushMessage(postObj){
         body:JSON.stringify(postObj),
     })
     .then(res => res.json())
-    .then(newMessage => console.log(newMessage))
+    .then(newPost => console.log(newPost))
 }
