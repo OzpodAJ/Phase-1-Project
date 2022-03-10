@@ -1,4 +1,8 @@
-document.querySelector('#ovrForm').addEventListener('submit', post)
+window.addEventListener('DOMContentLoaded', (event) => {
+    fetchMessages()
+    document.querySelector('#ovrForm').addEventListener('submit', post)
+    colorPicker.addEventListener("input",setColor);
+})
 function post(e){
     e.preventDefault()
     console.log (e)
@@ -38,14 +42,11 @@ function setColor(){
         colorPicker.style.backgroundColor = "#89CFF0"
     }
 }
-colorPicker.addEventListener("input",setColor);
-
 function fetchMessages(){
     fetch('http://localhost:3000/posts')
     .then(res => res.json())
     .then(messageData => messageData.forEach(newPost => postMessage(newPost)))
 }
-fetchMessages()
 function pushMessages(postObj){
     fetch('http://localhost:3000/posts', {
         method: 'POST',

@@ -1,18 +1,12 @@
 {
   "posts": [
     {
-      "username": "Zorcoz",
-      "message": "Test Message",
+      "username": "Andrew",
+      "message": "Everything Works!",
       "color": "purple",
       "id": 1
-    },
-    {
-      "username": "Zorcoz",
-      "message": "vgiyfyfyu",
-      "color": "green",
-      "id": 2
     }
-  ],
+    ],
   "comments": [
     {
       "body": "test comment",
