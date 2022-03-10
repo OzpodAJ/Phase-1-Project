@@ -5,23 +5,24 @@
       "message": "Test Message",
       "color": "purple",
       "id": 1
+    },
+    {
+      "username": "Zorcoz",
+      "message": "vgiyfyfyu",
+      "color": "green",
+      "id": 2
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "body": "test comment",
+      "postId": "1",
+      "id": 1
     },
     {
-      "body": "Test?",
+      "body": "LEFNoiwnfojq",
       "postId": "1",
       "id": 2
-    },
-    {
-      "body": "",
-      "postId": "1",
-      "id": 3
     }
   ],
   "profile": {
